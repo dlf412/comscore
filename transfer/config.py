@@ -30,8 +30,8 @@ notify_customer_time = "11:00:00"
 results_delivered_agos = 48  # 交付N天前的结果
 results_delivered_time = "08:00:00"  # 交付结果的时间
 
-customer_emails = ['deng_lingfei@vobile.cn']
-ourselves_emails = ['deng_lingfei@vobile.cn']
+customer_emails = ['deng_lingfei@mycompany.cn']
+ourselves_emails = ['deng_lingfei@mycompany.cn']
 
 
 filelist_error_mail = {

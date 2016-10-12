@@ -4,7 +4,7 @@
 '''
    Copyright (c) 2016 Vobile Inc.  All Rights Reserved.
    Author: xu_xiaorong
-   Email: xu_xiaorong@vobile.cn
+   Email: xu_xiaorong@mycompany.cn
    Created_at: 2016-08-10 13:46:22
 '''
 import os

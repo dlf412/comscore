@@ -20,5 +20,5 @@
         "component_prefix": "MediaWise1_",
         "heartbeat_interval": 30
     },
-    "mail_url": "http://cm.ops.vobile.org/api/sendEmail"
+    "mail_url": "http://cm.ops.mycompany.org/api/sendEmail"
 }

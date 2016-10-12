@@ -49,9 +49,9 @@ body_successfully_unsupported = '''The following videos are either corrupted or 
 
 
 class EmailDeliver(object):
-    def __init__(self, config_comscore_email, config_vobile_email):
+    def __init__(self, config_comscore_email, config_mycompany_email):
         self.mail_comscore = config_comscore_email
-        self.mail_vobile = config_vobile_email
+        self.mail_mycompany = config_mycompany_email
 
     def send_md5_fail(self, day, md5_error_file, invalid_file):
         not_exists_files = ''
@@ -61,26 +61,26 @@ class EmailDeliver(object):
         subject = subject_md5_error.format(day)
         body = body_md5_error.format(
             day, '\n'.join(md5_error_file), not_exists_files)
-        logger.info('send md5 fail files email to {}'.format(self.mail_vobile))
-        send_mail(subject, body, self.mail_vobile)
+        logger.info('send md5 fail files email to {}'.format(self.mail_mycompany))
+        send_mail(subject, body, self.mail_mycompany)
 
     def send_invalid_file(self, day, invalid_file):
         subject = subject_invalid_file.format(day)
         body = body_invalid_file.format(day, '\n'.join(invalid_file))
-        logger.info('send invalid files email to {}'.format(self.mail_vobile))
-        send_mail(subject, body, self.mail_vobile)
+        logger.info('send invalid files email to {}'.format(self.mail_mycompany))
+        send_mail(subject, body, self.mail_mycompany)
 
     def send_filelist_miss(self, day):
         subject = subject_not_found_filelist.format(day)
         body = body_not_found_filelist.format(day)
-        logger.info('send filelist miss email to {}'.format(self.mail_vobile))
-        send_mail(subject, body, self.mail_vobile)
+        logger.info('send filelist miss email to {}'.format(self.mail_mycompany))
+        send_mail(subject, body, self.mail_mycompany)
 
     def send_fail(self, day, error_files):
         subject = subject_create_dna_error.format(day)
         body = body_create_dna_error.format(day, '\n'.join(error_files))
-        logger.info('send make dna fail email to {}'.format(self.mail_vobile))
-        send_mail(subject, body, self.mail_vobile)
+        logger.info('send make dna fail email to {}'.format(self.mail_mycompany))
+        send_mail(subject, body, self.mail_mycompany)
 
     def send_success(self, day, problem_files):
         error_file_info = ''
@@ -90,6 +90,6 @@ class EmailDeliver(object):
         subject = subject_successfully.format(day)
         body = body_successfully.format(day, error_file_info)
         logger.info('send success email to {}'.format(
-            self.mail_comscore + self.mail_vobile))
-        send_mail(subject, body, self.mail_vobile)
+            self.mail_comscore + self.mail_mycompany))
+        send_mail(subject, body, self.mail_mycompany)
         send_mail(subject, body, self.mail_comscore)

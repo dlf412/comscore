@@ -9,7 +9,7 @@ import json
 import datetime
 
 from config import (config_down_ftp, config_upload_ftp,
-                    config_vobile_email, config_comscore_email)
+                    config_mycompany_email, config_comscore_email)
 from include import PAR_DIR, logger
 from db_access import AccessDB
 from ftp_sync import FTPSync
@@ -64,7 +64,7 @@ def main():
                        config_down_ftp['passwd'])
     upload_ftp = FTPSync(config_upload_ftp['host'], config_upload_ftp['user'],
                          config_upload_ftp['passwd'])
-    email = EmailDeliver(config_comscore_email, config_vobile_email)
+    email = EmailDeliver(config_comscore_email, config_mycompany_email)
     run(input_date, down_ftp, upload_ftp, db_conn, config, email)
 
 

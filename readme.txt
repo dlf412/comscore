@@ -85,7 +85,3 @@
 └── var
     ├── log
     └── run
-
-
-安装:
-https://seals.vobile.cn/trac/MediaWise/wiki/Comscore/install

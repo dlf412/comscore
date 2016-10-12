@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 '''
  Author: deng_lingfei
- Email: deng_lingfei@vobile.cn
+ Email: deng_lingfei@mycompany.cn
  Create time: 2016-01-04 10:28
  Last modified: 2016-01-04 10:28
  Filename: mwlogger.py
@@ -247,8 +247,8 @@ class ALogger(MwLogger):
 
 if __name__ == '__main__':
     taskid = str(uuid.uuid1())
-    logger = MwLogger('test_log', log_level='DEBUG', company_id="vobile123")
-    aLogger = ALogger('test_log', log_level='DEBUG', company_id="vobile123")
+    logger = MwLogger('test_log', log_level='DEBUG', company_id="mycompany123")
+    aLogger = ALogger('test_log', log_level='DEBUG', company_id="mycompany123")
     aLogger.event('task', 'task created end', etype='long', eid=taskid, flag='end')
     aLogger.event('task', 'task created end', etype='long', eid=taskid, flag='end')
 

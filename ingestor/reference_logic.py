@@ -36,7 +36,7 @@ def get_ftp_files(down_ftp, day, email, manual):
         logger.error('{} files md5 check error on {}'.format(
             len(md5_error_file), day))
         # if not manual:
-        #     email.send_vobile_md5_fail(day, md5_error_file, invalid_file)
+        #     email.send_mycompany_md5_fail(day, md5_error_file, invalid_file)
     elif invalid_file:
         logger.error('{} filelist.txt {} files not exists'.format(
             day, len(invalid_file)))

@@ -6,7 +6,7 @@ import requests
 import json
 import traceback
 
-def send(subject, body, recv, url="http://cm.ops.vobile.org/api/sendEmail"):
+def send(subject, body, recv, url="http://cm.ops.mycompany.org/api/sendEmail"):
     if url and recv and subject:
         _tos = ','.join(recv)
         data = '&'.join(["tos=%s" % _tos, "subject=%s" % subject,

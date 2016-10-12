@@ -2,7 +2,7 @@
 # coding:utf-8
 
 # Author: xu_xiaorong
-# Mail: xu_xiaorong@vobile.cn
+# Mail: xu_xiaorong@mycompany.cn
 # Created: 2013-09-17
 
 '''
