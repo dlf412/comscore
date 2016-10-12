@@ -1,0 +1,24 @@
+{
+    "work_db": "mysql://root:1234@192.168.6.193:3306/comScore",
+    "download_queue": "amqp://192.168.6.193:5672",
+    "download_retry_queue": "amqp://192.168.6.193:5672",
+    "query_queue": "amqp://192.168.6.193:5672",
+    "query_retry_queue": "amqp://192.168.6.193:5672",
+    "redis": {
+        "host": "192.168.1.43",
+        "port": 8111,
+        "password":"123456"
+    },
+    "monitor": {
+        "host": "192.168.5.176",
+        "port": 9999
+    },
+    "dbpc": {
+        "host": "192.168.1.41",
+        "port": 5800,
+        "service": "comscore",
+        "component_prefix": "MediaWise1_",
+        "heartbeat_interval": 30
+    },
+    "mail_url": "http://cm.ops.vobile.org/api/sendEmail"
+}
